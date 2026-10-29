@@ -1,0 +1,104 @@
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  min-width: 320px;
+  max-width: 460px;
+  background: #191c1e;
+  color: #fff;
+  padding: 14px 18px 18px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  z-index: 99999;
+  animation: slideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.success {
+  border-left: 4px solid #227d72;
+}
+
+.success .icon {
+  color: #4ade80;
+}
+
+.error {
+  border-left: 4px solid #e74c3c;
+}
+
+.error .icon {
+  color: #f87171;
+}
+
+.info {
+  border-left: 4px solid #87452f;
+}
+
+.info .icon {
+  color: #d9c2bb;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.message {
+  flex: 1;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: #227d72;
+  transition: width 0.05s linear;
+}
+
+.error .progressBar {
+  background: #e74c3c;
+}
+
+.info .progressBar {
+  background: #87452f;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

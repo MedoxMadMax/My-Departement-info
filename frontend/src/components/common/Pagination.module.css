@@ -1,0 +1,106 @@
+.paginationContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+  font-size: 0.875rem;
+  color: var(--text-muted, #64748b);
+}
+
+.info {
+  font-size: 0.875rem;
+  color: var(--text-muted, #64748b);
+}
+
+.info strong {
+  color: var(--text-primary, #1e293b);
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pageNumbers {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.pageBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  padding: 0 0.6rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--border-color, #e2e8f0);
+  background-color: var(--bg-card, #ffffff);
+  color: var(--text-primary, #334155);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background-color: var(--color-primary-light, #eff6ff);
+  border-color: var(--color-primary, #2563eb);
+  color: var(--color-primary, #2563eb);
+}
+
+.pageBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  border-color: var(--border-color, #e2e8f0);
+  background-color: var(--bg-surface, #f8fafc);
+}
+
+.navBtn {
+  font-size: 0.8125rem;
+  padding: 0 0.75rem;
+}
+
+.numberBtn {
+  min-width: 2.25rem;
+}
+
+.active {
+  background-color: var(--color-primary, #2563eb) !important;
+  border-color: var(--color-primary, #2563eb) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+
+.ellipsis {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 2.25rem;
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.875rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 640px) {
+  .paginationContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .navBtn span {
+    display: none;
+  }
+}

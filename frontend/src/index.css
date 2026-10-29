@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Colors from Stitch Design System */
+  --color-primary: #87452f;
+  --color-primary-container: #a45d45;
+  --color-primary-light: #ffdbd0;
+  --color-primary-inverse: #ffb59d;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #fff2ef;
+  
+  --color-surface: #f8f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f4f6;
+  --color-surface-container: #edeef0;
+  --color-surface-container-high: #e7e8ea;
+  --color-surface-container-highest: #e1e2e4;
+  --color-surface-variant: #e1e2e4;
+  --color-surface-tint: #8f4c35;
+  
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #53433e;
+  --color-on-background: #191c1e;
+  
+  --color-outline: #86736d;
+  --color-outline-variant: #d9c2bb;
+  
+  --color-secondary: #575e70;
+  --color-secondary-container: #d9dff5;
+  
+  --color-tertiary: #006359;
+  --color-error: #ba1a1a;
+  --color-success: #006359;
+
+  /* Typography */
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-unit: 8px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-section: 80px;
+  
+  --container-max: 1280px;
+  --gutter: 24px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-default: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-l1: 0 4px 20px rgba(0,0,0,0.04);
+  --shadow-l2: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Global Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Typography Classes */
+.display {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+}
+
+.headline-lg {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+}
+
+.headline-md {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.body-lg {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.body-md {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.label-md {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.label-sm {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.mono-label {
+  font-family: var(--font-family-mono);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.mono-sm {
+  font-family: var(--font-family-mono);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* Structural Classes */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: var(--space-section) 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Global Quill Video Embed Styles */
+iframe.ql-video {
+  display: block;
+  margin: 24px auto;
+  width: 90%;
+  max-width: 640px;
+  height: 360px;
+  border-radius: 8px;
+  border: none;
+  background-color: #000;
+  box-shadow: var(--shadow-l2);
+}
+
+/* Global Quill Image Styles */
+.ql-editor img, .admin-dash__editor-main img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}

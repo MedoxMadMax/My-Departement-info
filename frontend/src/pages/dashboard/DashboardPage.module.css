@@ -1,0 +1,101 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.header {
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-xs);
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--color-on-surface-variant);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-lg);
+}
+
+.activityCard, .quickActionsCard {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.cardHeader {
+  padding: var(--space-md) var(--space-lg);
+  border-bottom: 1px solid var(--color-outline-variant);
+  background-color: var(--color-surface);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.cardBody {
+  padding: var(--space-lg);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.actionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.actionList li {
+  margin-bottom: var(--space-sm);
+}
+
+.actionList button {
+  width: 100%;
+  text-align: left;
+  padding: var(--space-md);
+  background-color: var(--color-surface-container);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  color: var(--color-primary-container);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.actionList button:hover {
+  background-color: var(--color-primary-light);
+}
+
+@media (max-width: 1023px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

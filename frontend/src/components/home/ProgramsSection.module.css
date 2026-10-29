@@ -1,0 +1,80 @@
+.section {
+  background-color: var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: var(--space-xl);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+}
+
+.desc {
+  font-size: 16px;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xl);
+}
+
+.btn {
+  max-width: 300px;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  height: 100%;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary-container);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--color-on-surface);
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: 16px;
+  color: var(--color-on-surface-variant);
+  flex: 1;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,28 @@
+.statsBar {
+  background-color: var(--color-surface-white);
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid > div:not(:last-child) {
+  border-right: 1px solid var(--color-outline-variant);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .grid > div:nth-child(2) {
+    border-right: none;
+  }
+  
+  .grid > div:nth-child(1),
+  .grid > div:nth-child(2) {
+    border-bottom: 1px solid var(--color-outline-variant);
+  }
+}

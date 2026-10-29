@@ -1,0 +1,133 @@
+.page {
+  background-color: var(--color-surface);
+}
+
+.header {
+  background-color: #2d3133;
+  color: #ffffff;
+  padding: var(--space-xl) 0;
+}
+
+.headerContent {
+  max-width: 800px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.filtersWrapper {
+  background-color: var(--color-surface-white);
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding: var(--space-sm) 0;
+}
+
+.filters {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  font-family: var(--font-family-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface-variant);
+  cursor: pointer;
+  border-radius: var(--radius-full);
+}
+
+.filterBtn:hover {
+  background-color: var(--color-surface-container);
+}
+
+.filterBtn.active {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary);
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  color: var(--color-on-surface);
+  border-bottom: 2px solid var(--color-surface-container);
+  padding-bottom: var(--space-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-md);
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.badge {
+  font-family: var(--font-family-mono);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  background-color: var(--color-surface-container);
+  border-radius: 4px;
+  color: var(--color-on-surface-variant);
+}
+
+.cardDesc {
+  font-size: 16px;
+  color: var(--color-on-surface-variant);
+  margin-bottom: var(--space-xl);
+  flex: 1;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-outline-variant);
+}
+
+.meta {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-on-surface-variant);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

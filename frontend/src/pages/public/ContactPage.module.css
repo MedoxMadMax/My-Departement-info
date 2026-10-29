@@ -1,0 +1,143 @@
+.page {
+  background-color: var(--color-surface);
+}
+
+.header {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+  background-color: var(--color-surface-white);
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--color-on-surface-variant);
+  max-width: 600px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: var(--space-2xl);
+}
+
+.formCard {
+  padding: var(--space-xl);
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  color: var(--color-on-surface);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.selectGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-md);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-xs);
+  text-transform: uppercase;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-default);
+  font-size: 14px;
+  color: var(--color-on-surface);
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary-container);
+}
+
+.infoCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.infoCard {
+  padding: var(--space-lg);
+  background-color: var(--color-tertiary);
+  color: #ffffff;
+}
+
+.infoTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-inverse);
+}
+
+.infoBlock {
+  margin-bottom: var(--space-md);
+}
+
+.infoBlock h4 {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.infoBlock p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.infoBlock a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.mapCard {
+  height: 250px;
+}
+
+.mapPlaceholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface-container);
+  color: var(--color-on-surface-variant);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,116 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  padding: var(--space-md) 0;
+}
+
+.header.scrolled {
+  background-color: var(--color-surface-white);
+  box-shadow: var(--shadow-l1);
+  padding: var(--space-sm) 0;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.navLogo {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.navLinks a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-on-surface);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navLinks a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-primary-container);
+  transition: width 0.2s ease;
+}
+
+.navLinks a:hover::after,
+.navLinks a.active::after {
+  width: 100%;
+}
+
+.navLinks a.active {
+  color: var(--color-primary-container);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.lockIcon {
+  font-size: 14px;
+  margin-left: var(--space-xs);
+  color: var(--color-on-surface-variant);
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: var(--color-on-surface);
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  .navLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-surface-white);
+    flex-direction: column;
+    padding: var(--space-lg);
+    box-shadow: var(--shadow-l1);
+  }
+  
+  .navLinks.open {
+    display: flex;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+  
+  .actions a button {
+    display: none;
+  }
+}

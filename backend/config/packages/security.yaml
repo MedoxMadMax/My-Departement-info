@@ -1,0 +1,54 @@
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\Utilisateur
+                property: email
+
+    firewalls:
+        dev:
+            pattern: ^/(_profiler|_wdt|assets|build)/
+            security: false
+        login:
+            pattern: ^/api/login
+            stateless: true
+            json_login:
+                check_path: /api/login
+                username_path: email
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+        api:
+            pattern: ^/api
+            stateless: true
+            jwt: ~
+
+    access_control:
+        - { path: ^/api/login, roles: PUBLIC_ACCESS }
+        - { path: ^/api/public, roles: PUBLIC_ACCESS }
+        - { path: ^/api/super-admin/utilisateurs, methods: [GET], roles: [ROLE_SUPER_ADMIN, ROLE_SECRETAIRE] }
+        - { path: ^/api/super-admin, roles: ROLE_SUPER_ADMIN }
+        - { path: ^/api/admin, methods: [GET], roles: [ROLE_ADMIN, ROLE_SECRETAIRE] }
+        - { path: ^/api/admin, roles: ROLE_ADMIN }
+        - { path: ^/api/secretaire, roles: ROLE_SECRETAIRE }
+        - { path: ^/api/enseignant, roles: ROLE_PROF }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_SECRETAIRE]
+        ROLE_PROF: ROLE_USER
+        ROLE_SECRETAIRE: ROLE_USER
+
+when@test:
+    security:
+        password_hashers:
+            Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
+                algorithm: auto
+                cost: 4
+                time_cost: 3
+                memory_cost: 10
+

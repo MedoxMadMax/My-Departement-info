@@ -1,0 +1,231 @@
+﻿.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.titleContainer {
+  border-left: 8px solid var(--color-primary);
+  padding-left: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-xs);
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-on-surface-variant);
+}
+
+.searchContainer {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .searchContainer {
+    width: 320px;
+  }
+}
+
+.searchInput {
+  width: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  padding: var(--space-md) var(--space-xl) var(--space-md) var(--space-md);
+  color: var(--color-on-surface);
+  border-radius: 0;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-on-surface-variant);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border: 1px solid var(--color-outline-variant);
+  background-color: var(--color-surface-container-lowest);
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.table thead tr {
+  background-color: var(--color-surface-container);
+  border-bottom: 2px solid var(--color-outline-variant);
+}
+
+.table th {
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+}
+
+.table tbody {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--color-on-surface);
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--color-outline-variant);
+  transition: background-color 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background-color: var(--color-surface);
+}
+
+.table td {
+  padding: var(--space-lg) var(--space-lg);
+  vertical-align: top;
+}
+
+.timeText {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  color: var(--color-on-surface-variant);
+  white-space: nowrap;
+}
+
+.userBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 700;
+}
+
+.userRole {
+  color: var(--color-on-surface-variant);
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+.badgeValidation {
+  display: inline-block;
+  background-color: var(--color-inverse-surface);
+  color: var(--color-inverse-on-surface);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--color-inverse-surface);
+}
+
+.badgeCreation {
+  display: inline-block;
+  background-color: var(--color-tertiary-container);
+  color: var(--color-on-tertiary-container);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--color-tertiary-container);
+}
+
+.badgeModification {
+  display: inline-block;
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-secondary-container);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--color-secondary-container);
+}
+
+.badgeSuppression {
+  display: inline-block;
+  background-color: var(--color-error-container);
+  color: var(--color-on-error-container);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--color-error-container);
+}
+
+.badgeDefault {
+  display: inline-block;
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface-variant);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border: 1px solid var(--color-outline-variant);
+}
+
+.entityType {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-family: var(--font-label);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.entityDetails {
+  color: var(--color-on-surface-variant);
+  font-size: 0.875rem;
+}
+
+.searchInput::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}

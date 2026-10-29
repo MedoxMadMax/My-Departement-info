@@ -1,0 +1,346 @@
+.page {
+  flex: 1;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 4px solid var(--color-primary);
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  color: var(--color-secondary);
+  max-width: 42rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.addBtn {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-container, #ffffff);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-primary-container);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  letter-spacing: 0.05em;
+}
+
+.addBtn:hover {
+  background-color: var(--color-primary);
+}
+
+.tableContainer {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  border-radius: 0;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table th {
+  background-color: var(--color-surface-container-highest);
+  border-bottom: 1px solid var(--color-outline);
+  border-right: 1px solid var(--color-outline-variant);
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--color-on-surface);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.table th:last-child {
+  border-right: none;
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-outline);
+  border-right: 1px solid var(--color-outline-variant);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.table td:last-child {
+  border-right: none;
+}
+
+.table tr:hover {
+  background-color: var(--color-surface-variant);
+}
+
+.acronymeBadge {
+  background-color: var(--color-on-background);
+  color: var(--color-surface);
+  border-left: 4px solid var(--color-primary);
+  padding: 0.5rem 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.laboName {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.axesHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
+
+.axesList {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+  margin: 0 0 0 0.25rem;
+  padding: 0;
+}
+
+.axesList li {
+  margin-bottom: 0.25rem;
+}
+
+.siteWebLink {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+.siteWebLink:hover {
+  color: var(--color-surface-tint);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.actionBtn {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  color: var(--color-on-surface);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.actionBtn:hover {
+  background-color: var(--color-surface-container-highest);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.statCard {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  padding: 1.5rem;
+  border-radius: 0;
+}
+
+.statCardPrimary {
+  border-top: 4px solid var(--color-primary);
+}
+
+.statCardSecondary {
+  border-top: 4px solid var(--color-secondary-container, #d9dff5);
+}
+
+.statLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.statValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-on-surface);
+  line-height: 1.1;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modalContent {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-outline);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 32rem;
+  border-radius: 0;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalTitle {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-on-surface);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: var(--color-on-surface);
+}
+
+.formGroup {
+  margin-bottom: 1rem;
+}
+
+.formLabel {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--color-on-surface);
+}
+
+.formInput {
+  width: 100%;
+  border: 1px solid var(--color-outline-variant);
+  padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  border-radius: 0;
+  background-color: var(--color-surface-container-lowest, #ffffff);
+  color: var(--color-on-surface);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.cancelBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-outline);
+  background-color: transparent;
+  color: var(--color-on-surface);
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.submitBtn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-on-primary, #fff);
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0;
+}
+
+.submitBtn:hover {
+  background-color: var(--color-primary-container);
+}
+

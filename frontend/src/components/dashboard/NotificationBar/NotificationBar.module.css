@@ -1,0 +1,63 @@
+.notificationContainer {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4B5563;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.notificationCard {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    border: 2px solid #E5E7EB;
+    background: #fff;
+    gap: 12px;
+}
+
+.notificationCard.validee {
+    border-left: 4px solid #10B981;
+}
+
+.notificationCard.validee .icon {
+    color: #10B981;
+}
+
+.notificationCard.refusee {
+    border-left: 4px solid #EF4444;
+}
+
+.notificationCard.refusee .icon {
+    color: #EF4444;
+}
+
+.content {
+    flex: 1;
+}
+
+.message {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+    color: #111827;
+}
+
+.motif {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #EF4444;
+    font-weight: 500;
+}
+
+.date {
+    font-size: 12px;
+    color: #6B7280;
+    font-family: 'JetBrains Mono', monospace;
+}

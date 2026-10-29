@@ -1,0 +1,63 @@
+.loginContainer {
+  width: 100%;
+  max-width: 480px;
+}
+
+.loginCard {
+  padding: var(--space-2xl);
+  background-color: var(--color-surface-white);
+  border: 1px solid var(--color-outline-variant);
+  box-shadow: var(--shadow-l2);
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+  margin-bottom: var(--space-sm);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--color-on-surface-variant);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.forgotPassword {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: var(--space-lg);
+}
+
+.forgotPassword a {
+  font-size: 12px;
+  color: var(--color-primary-container);
+  text-decoration: underline;
+}
+
+.errorAlert {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  margin-bottom: var(--space-md);
+  text-align: center;
+  border: 1px solid #f87171;
+}
+
+@media (max-width: 767px) {
+  .loginCard {
+    padding: var(--space-lg);
+  }
+}
